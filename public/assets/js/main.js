@@ -27,14 +27,14 @@ var
     },
 
     plus: function(val) {
-      $.post('/count.php', {add: val}, function(data) {
+      $.post('/count', {add: val}, function(data) {
         Wells.update(data.count);
       }, 'json');
     },
 
     update: function(val) {
       if (!val) {
-        return $.getJSON('/count.php', function(data) {
+        return $.getJSON('/count', function(data) {
           Wells.update(data.count);
         });
       }
