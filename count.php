@@ -12,4 +12,4 @@ if ( isset($_POST['add']) )
 }
 
 $val = $redis->get($date);
-echo json_encode(Array('count' => $val));
+echo json_encode(Array('count' => intval($redis->get($date)) ?: 0));

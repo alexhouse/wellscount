@@ -2,7 +2,7 @@ var
   Wells = {
     init: function() {
       Wells.update();
-      setInterval(function() { Wells.update(); }, 5000);
+      setInterval(function() { Wells.update(); }, 2500);
 
       $('.btn-count').on('click', function(e) {
         var
